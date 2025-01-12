@@ -1,0 +1,9 @@
+# ninja log v5
+0	150	7584024349221716	build.ninja	f0119bcb2385d5e2
+19	2364	7584024510602108	CMakeFiles/BankProject.dir/utils/DateUtil.cpp.obj	8fa0c7384d6d6515
+0	6038	7584024547465316	CMakeFiles/BankProject.dir/main.cpp.obj	ae0e6dd002fb755d
+14	6226	7584024549340042	CMakeFiles/BankProject.dir/User.cpp.obj	c2a4522e9d39604e
+10	6240	7584024549464981	CMakeFiles/BankProject.dir/account/Account.cpp.obj	ee0f75392bbe8b83
+5	6729	7584024554299343	CMakeFiles/BankProject.dir/Registration.cpp.obj	8dd916c50e5ed0c8
+24	6885	7584024555923189	CMakeFiles/BankProject.dir/bank/Bank.cpp.obj	bda050410c40af50
+6886	7456	7584024561251198	BankProject.exe	57517de72aee9361

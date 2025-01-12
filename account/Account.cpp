@@ -56,3 +56,31 @@ nlohmann::json Account::toJson() {
         {"status", status}
     };
 }
+
+int Account::getBalance() {
+    return amount;
+};
+
+void Account::addToBalance(double amount) {
+    if (amount > 0) {
+        this->amount += amount;
+    }
+    else {
+        cout << "inncorect amount input..." << endl;
+    }
+}
+
+void Account::minusFromBalance(double Amount) {
+    if (Amount > 0) {
+        if (Amount <= amount) {
+            this->amount -= Amount;
+        }
+        else {
+            cout << "not enough money..." << endl;
+        }
+    }
+    else {
+        cout << "inncorect amount input..." << endl;
+    }
+    
+}

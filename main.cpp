@@ -56,7 +56,7 @@ int main() {
         }
     }*/
 
-    Bank bank("Privates", "Kiev");
+ /*   Bank bank("Privates", "Kiev");
 
     User user("Robert Jackson", "email@com", "380391000002", "client", "admin");
     Account* account = new Account(user);
@@ -67,7 +67,56 @@ int main() {
     registration.registerUser(user);
 
     bank.addAccount(account);
-    bank.addAccount(account2);
+    bank.addAccount(account2);*/
+
+    cout << "Welcome to the Bank! " << endl;
+    cout << "Choose what do you want to do \n1. Login\n2. Register ";
+    int choice;
+    cin >> choice;
+    switch (choice) {
+    case 1:
+        //Todo create login
+        break;
+    case 2:
+        cout << "Enter your name: ";
+        string name;
+        cin >> name;
+
+        cout << "Enter your email: ";
+        string email;
+        cin >> email;
+
+        cout << "Enter your phone: ";
+        string phone;
+        cin >> phone;
+        cout << "Enter your password: ";
+        string password;
+        cin >> password;
+
+        while (true)
+        {
+
+
+            cout << "Enter Confirm password: ";
+            string confpassword;
+            cin >> confpassword;
+            if (password == confpassword) {
+
+                User* user = new User(name, email, phone, "client", "admin");
+                user->setPassword(password);
+                Registration r;
+                r.registerUser(*user);
+
+                delete user;
+                break;
+            }
+            else
+            {
+                cout << "Try again confirm password" << endl;
+            }
+        }
+        break;
+    }
 
     // bank.addAccount(account);
     // bank.addAccount(account2);
