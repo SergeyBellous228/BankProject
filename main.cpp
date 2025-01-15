@@ -56,9 +56,8 @@ int main() {
         }
     }*/
 
- /*   Bank bank("Privates", "Kiev");
 
-    User user("Robert Jackson", "email@com", "380391000002", "client", "admin");
+    /*User user("Robert Jackson", "email@com", "380391000002", "client", "admin");
     Account* account = new Account(user);
     Account* account2 = new Account(user);
 
@@ -68,6 +67,8 @@ int main() {
 
     bank.addAccount(account);
     bank.addAccount(account2);*/
+
+    User* user;
 
     cout << "Welcome to the Bank! " << endl;
     cout << "Choose what do you want to do \n1. Login\n2. Register ";
@@ -102,7 +103,7 @@ int main() {
             cin >> confpassword;
             if (password == confpassword) {
 
-                User* user = new User(name, email, phone, "client", "admin");
+                user = new User(name, email, phone, "client", "admin");
                 user->setPassword(password);
                 Registration r;
                 r.registerUser(*user);
@@ -117,6 +118,15 @@ int main() {
         }
         break;
     }
+
+
+    Bank bank("Privates", "Kiev");
+
+    Account* userAccount = new Account(*user);
+
+    userAccount->show();
+
+    bank.addAccount(userAccount);
 
     // bank.addAccount(account);
     // bank.addAccount(account2);

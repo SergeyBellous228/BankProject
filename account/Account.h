@@ -16,6 +16,7 @@ private:
     User applicant;
     string date;
     string status;
+    double amount;
 
 public:
     Account();
@@ -35,6 +36,12 @@ public:
     void show();
 
     nlohmann::json toJson();
+
+    int getBalance();
+
+    void addToBalance(double amount);
+
+    void minusFromBalance(double amount);
 
 };
 

@@ -18,5 +18,5 @@ add_executable(BankProject main.cpp
         utils/DateUtil.h
         bank/Bank.cpp
         bank/Bank.h
-)
+  "Trasaction.h" "Trasaction.cpp")
 
